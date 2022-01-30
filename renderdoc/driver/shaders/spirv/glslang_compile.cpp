@@ -29,8 +29,8 @@
 #undef min
 #undef max
 
-#include "glslang/glslang/Include/Types.h"
-#include "glslang/glslang/Public/ShaderLang.h"
+#include <glslang/Include/Types.h>
+#include <glslang/Public/ShaderLang.h>
 
 static bool glslang_inited = false;
 rdcarray<glslang::TShader *> *allocatedShaders = NULL;
@@ -129,6 +129,7 @@ static TBuiltInResource DefaultResources = {
     /*.maxTaskWorkGroupSizeY_NV =*/1,
     /*.maxTaskWorkGroupSizeZ_NV =*/1,
     /*.maxMeshViewCountNV =*/4,
+    /*.maxDualSourceDrawBuffersEXT =*/1,
 
     /*.limits*/
     {

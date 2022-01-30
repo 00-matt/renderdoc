@@ -419,6 +419,17 @@ elseif(UNIX)
     endif()
 endif()
 
+# glslang package does not export a -config.cmake file.
+option(GLSLANG_TARGET_DIR "Absolute path to glslangTargets.cmake directory")
+include("${GLSLANG_TARGET_DIR}/OSDependentTargets.cmake")
+include("${GLSLANG_TARGET_DIR}/OGLCompilerTargets.cmake")
+include("${GLSLANG_TARGET_DIR}/HLSLTargets.cmake")
+include("${GLSLANG_TARGET_DIR}/glslangTargets.cmake")
+include("${GLSLANG_TARGET_DIR}/SPIRVTargets.cmake")
+if(NOT TARGET glslang OR NOT TARGET SPIRV)
+  message(FATAL_ERROR "glslang or SPIRV target not found")
+endif()
+
 add_subdirectory(renderdoc)
 
 # these variables are handled within the CMakeLists.txt in qrenderdoc,
