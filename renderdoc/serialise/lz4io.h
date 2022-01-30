@@ -24,7 +24,7 @@
 
 #pragma once
 
-#include "lz4/lz4.h"
+#include <lz4.h>
 #include "streamio.h"
 
 class LZ4Compressor : public Compressor

@@ -29,7 +29,7 @@
 #include "common/common.h"
 #include "core/settings.h"
 #include "driver/shaders/dxil/dxil_bytecode.h"
-#include "lz4/lz4.h"
+#include <lz4.h>
 #include "md5/md5.h"
 #include "serialise/serialiser.h"
 #include "strings/string_utils.h"

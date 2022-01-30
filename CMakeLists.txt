@@ -419,6 +419,12 @@ elseif(UNIX)
     endif()
 endif()
 
+find_package(PkgConfig REQUIRED)
+find_package(miniz REQUIRED CONFIG)
+
+pkg_check_modules(lz4 REQUIRED IMPORTED_TARGET liblz4)
+pkg_check_modules(zstd REQUIRED IMPORTED_TARGET libzstd)
+
 # glslang package does not export a -config.cmake file.
 option(GLSLANG_TARGET_DIR "Absolute path to glslangTargets.cmake directory")
 include("${GLSLANG_TARGET_DIR}/OSDependentTargets.cmake")

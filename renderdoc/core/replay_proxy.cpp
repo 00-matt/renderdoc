@@ -25,7 +25,7 @@
 
 #include "replay_proxy.h"
 #include <list>
-#include "lz4/lz4.h"
+#include <lz4.h>
 #include "replay/dummy_driver.h"
 #include "serialise/lz4io.h"
 
