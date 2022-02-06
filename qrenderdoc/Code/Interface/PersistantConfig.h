@@ -588,8 +588,8 @@ DECLARE_REFLECTION_STRUCT(BugReport);
       "``True`` if the user has selected to completely opt-out from and disable all analytics "    \
       "collection and reporting.\n"                                                                \
       "\n"                                                                                         \
-      "Defaults to ``False``.");                                                                   \
-  CONFIG_SETTING_VAL(public, bool, bool, Analytics_TotalOptOut, false)                             \
+      "Defaults to ``True``.");                                                                    \
+  CONFIG_SETTING_VAL(public, bool, bool, Analytics_TotalOptOut, true)                              \
                                                                                                    \
   DOCUMENT(                                                                                        \
       "``True`` if the user has remained with analytics turned on, but has chosen to manually "    \

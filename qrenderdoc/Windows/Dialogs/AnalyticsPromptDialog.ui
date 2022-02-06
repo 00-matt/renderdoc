@@ -38,9 +38,6 @@
         <property name="text">
          <string>Gather anonymous low-detail statistics and submit automatically.</string>
         </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
        </widget>
       </item>
       <item>
@@ -54,6 +51,9 @@
        <widget class="QRadioButton" name="optOut">
         <property name="text">
          <string>Do not gather or submit any statistics.</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
